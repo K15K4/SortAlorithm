@@ -47,6 +47,28 @@ int getNextGap(int gap)
     return gap;
 }
 
+void bubbleSortM(int arr[], int n)
+{
+    int i, j;
+    int flag;	//  
+    for (i = 0; i < n - 1; i++)
+    {
+        flag = 0; 		// 
+        for (j = 0; j < n - i - 1; j++)
+        {
+            flag = 1;			// 
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+        if (flag == 0)		// 
+            break;
+    }
+}
+
 // Function to sort a[0..n-1] using Comb Sort
 void combSort(int a[], int n)
 {
